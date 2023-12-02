@@ -1,1 +1,1 @@
-# indianRestaurant
+This is restaurant website.
