@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'EB Garamond', serif;
+}
+
+header{
+    width: 100%;
+}
+
+header #mainNavbar{
+    width: 100%;
+}
+
+header #mainNavbar #navbarContainer{
+    display: flex;
+    width: 100%;
+    height: 62px;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+header #mainNavbar #navbarContainer a{
+    text-decoration: none;
+    color: black;
+}
+
+header #mainNavbar #navbarContainer .navItems{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header #mainNavbar #navbarContainer .navItems:hover::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+}
+
+main #secondaryNavigation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    gap: 40px;
+}
+
+main #secondaryNavigation  .menuItems{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+}
+
+main #secondaryNavigation  .menuItems:hover::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
+    width: 100%;
+}
+
+main #secondaryNavigation #breakfastContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+main #secondaryNavigation #lunchContainer{
+    display: none;
+
+}
+main #secondaryNavigation #dinnerContainer{
+    display: none;
+}
+main #secondaryNavigation #dessertContainer{
+    display: none;
+}
