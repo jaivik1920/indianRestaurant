@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.header span {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
+}
+
+.header span:hover::after {
+    width: 100%;
+}
+.contactContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    transition: width 4s,display 4s;
+   display: none; 
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.fadeIn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transition: width 4s,display 4s;
+}
+
+.close {
+    text-align: right;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.close img {
+    width: 15px;
+    height: 15px;
+}
+
+.mainCloseContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 100px;
+}
+.closeHeader {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.closeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 2px;
+    gap: 10px;
+}
+ .closeContainer p {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 800;
+
+ }
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstContainer{
+    padding-top: 100px;
+    background-image: url('../images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.box{
+    /* margin-top: 50px; */
+    overflow: hidden;
+}
+
+.firstContainer .box h1{
+    margin: 0;
+    text-align: left;
+    font-size: 80px;
+    color: white;
+    font-style: italic;
+}
+
+.secondContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    height: 400px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+}
+.card span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: transparent;
+}
+.card span:hover{
+    color: white;
+}
+.card1 :hover, .card2 :hover, .card3 :hover{
+    backdrop-filter: blur(10px);
+}
+.card1 {
+    background: url('../images/card1.jpg');
+
+}
+.card2 {
+    background: url("../images/card2.jpg");
+}
+.card3 {
+    background: url("../images/card3.jpg");
+}
+
+.card1, .card2, .card3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.famousContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.famousHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.famousHeader  span{
+    font-size: 80px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.famousDish {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftDish {
+    width: 50%;
+    overflow: hidden;
+}
+
+.leftDish img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.40s;
+}
+
+.leftDish img:hover{
+    transform: scale(1.03);
+}
+
+.rightDish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.rightDish p {
+    font-size: 50px;
+    border-bottom: 2px solid black;
+}
