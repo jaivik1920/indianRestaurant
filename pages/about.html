@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | The Indian Restaurant</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | The Indian Restaurant</title>
+  <link rel="stylesheet" href="../css/about.css">
 </head>
+
 <body>
-    
+  <div class="container">
+    <div class="contactContainer" id="contact">
+      <div class="close">
+        <span onclick="fadeOut()">
+          <img src="../images/close_icon.png" alt="close-icon" />
+        </span>
+      </div>
+      <div class="mainCloseContainer">
+        <div class="closeHeader">new hours</div>
+        <div class="closeContainer">
+          <span>MONDAY - TUESDAY</span>
+          <span>12:00 PM to 9:00 PM</span>
+        </div>
+        <div class="closeContainer">
+          <span>WEDNESDAY - SUNDAY</span>
+          <span>12:00 PM to 10:00 PM</span>
+        </div>
+        <div class="closeContainer">
+          <img src="../images/phone_icon.png" alt="" width="15px" />
+          <p>Call Now</p>
+          <a href="tel:+16473912231">647.391.2231</a>
+          <a href="tel:+19055989414">905.598.9414</a>
+        </div>
+        <div class="closeContainer">
+          <img src="../images/location_icon.png" alt="location_icon" width="15px">
+          <p>Direction Header</p>
+          <span>121 Brunel Rd, Mississauga</span>
+        </div>
+        <div class="closeContainer">
+          <img src="../images/message_icon.png" alt="" width="15px" />
+          <p>Message Here</p>
+          <a href="mailto:C0902999@mylambton.ca">C0902999@mylambton.ca</a>
+          <a href="mailto:C0903001@mylambton.ca">C0903001@mylambton.ca</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="header">
+      <span>Home</span>
+      </a>
+      <a href="./pages/menu.html">
+        <span>Menu</span>
+      </a>
+      <a href="./pages/about.html">
+        <span class="active">About</span>
+      </a>
+      <span onclick="fadeIn()"> Contact </span>
+    </nav>
+
+    <main class="mainContainer">
+      <div class="firstContainer">
+      </div>
+      <div class="box">
+        <h1>About Us</h2>
+      </div>
+      <div class="secondContainer">
+        <div class="leftContainer">
+          <p>about us</p>
+          <span>Excellence Speaks Through Excellence
+          </span>
+        </div>
+        <div class="rightContainer">
+          <span>
+            Indulge yourself in a pristine setting, presenting you the unapproachable splendor of the empyrean. Take
+            advantage of the seamless fine dining experience you have not experienced anywhere else. Located in the
+            beautiful historic house of Walter E. Calvert, Heritage India is an immaculate destination for every
+            occasion of your life.
+          </span>
+        </div>
+      </div>
+      <div class="thirdContainer">
+        <div class="galleryHeader">
+          <span>comfort food</span>
+          <span>121 Brunel Rd, Mississauga</span>
+        </div>
+        <div class="mainGallery">
+          <div class="card card1">
+            <span>
+              fafda and jalebi
+            </span>
+          </div>
+          <div class="card card2">
+            <span>
+              pyaaz kachori
+            </span>
+          </div>
+          <div class="card card3">
+            <span>
+              idli </span>
+          </div>
+          <div class="card card4">
+            <span>
+              pav bhaji
+            </span>
+          </div>
+          <div class="card card5">
+            <span>
+              SAMBHAR RICE </span>
+          </div>
+          <div class="card card6">
+            <span>
+              PANEER BUTTER MASALA
+            </span>
+          </div>
+          <div class="card card7">
+            <span>
+              SHORSHE ILISH
+            </span>
+          </div>
+          <div class="card card8">
+            <span>
+              Dosa </span>
+          </div>
+          <div class="card card9">
+            <span>
+              CHICKEN CURRY WITH NAAN
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="firstFooter">
+        <p>The Indian Restaurant</p>
+        <span>121 Brunel Rd | Mississauga, ON</span>
+        <span>647.391.2231 | 905.598.9414</span>
+      </div>
+      <div class="lastFooter"></div>
+    </footer>
+  </div>
+  <script>
+    function fadeIn() {
+      document.getElementById("contact").classList.add("fadeIn");
+    }
+    function fadeOut() {
+      document.getElementById("contact").classList.remove("fadeIn");
+    }
+  </script>
+
 </body>
+
 </html>
