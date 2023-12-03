@@ -1,474 +1,480 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'EB Garamond', serif;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "EB Garamond", serif;
 }
-
 
 .contactContainer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    max-width: 400px;
-    height: 100vh;
-    z-index: 2;
-    background-color: white;
-    transition: width 4s, display 4s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+  transition: width 4s, display 4s;
+  display: none;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.fadeIn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transition: width 4s, display 4s;
+}
+
+.close {
+  text-align: right;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.close img {
+  width: 15px;
+  height: 15px;
+}
+
+.mainCloseContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+.closeHeader {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.closeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 2px;
+  gap: 10px;
+}
+.closeContainer p {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.closeContainer a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+
+header #mainNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header #mainNavbar #logoDiv {
+  width: 15%;
+  margin: 5px 0px 10px 10px;
+  cursor: pointer;
+
+  @media screen and (max-width: 769px) {
     display: none;
-    padding: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
   }
-  .fadeIn {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-    transition: width 4s, display 4s;
-  }
-  
-  .close {
-    text-align: right;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: 400;
-    cursor: pointer;
-  }
-  
-  .close img {
-    width: 15px;
-    height: 15px;
-  }
-  
-  .mainCloseContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    margin-top: 50px;
-  }
-  .closeHeader {
-    font-size: 40px;
-    text-transform: uppercase;
-  }
-  
-  .closeContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    letter-spacing: 2px;
-    gap: 10px;
-  }
-  .closeContainer p {
-    margin: 0px;
-    font-size: 12px;
-    font-weight: 800;
-  }
-  
-  .closeContainer a {
-    color: black;
-    text-decoration: none;
-  }
-
-header{
-    width: 100%;
 }
 
-header #mainNavbar{
-    display: flex;
-    width: 100%;
+#logoDiv h3 {
+  font-size: 14px;
+  line-height: 12px;
 }
 
-header #mainNavbar #logoDiv{
-    width: 15%;
-    /* background: linear-gradient(to bottom right, white,#EFFBFF); */
-    margin: 5px 0px 0px 10px;
-    cursor: pointer;
-
-     /* tablets */
-    @media screen and (max-width : 1400px) and (min-width: 481px) {
-        display: none;
-    } 
-      /* mobile */
-     @media screen and (max-width: 481px) { 
-        display: none;
-    } 
+header #mainNavbar #logoDiv a {
+  text-decoration: none;
+  color: black;
+}
+#lastDiv {
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
+}
+#lastDiv p {
+  font-size: 14px;
 }
 
-header #mainNavbar #logoDiv a{
-    text-decoration: none;
-    color: black;
+#lastDiv span {
+  color: orangered;
+  font-weight: bolder;
 }
 
-header #mainNavbar #logoDiv span{
-    color: orangered;
-    font-weight: bolder;
+header #mainNavbar #navbarContainer {
+  display: flex;
+  width: 80%;
+  height: 62px;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
 }
 
-header #mainNavbar #navbarContainer{
-    display: flex;
-    width: 80%;
-    height: 62px;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
+header #mainNavbar #navbarContainer a {
+  text-decoration: none;
+  color: black;
 }
 
-header #mainNavbar #navbarContainer a{
-    text-decoration: none;
-    color: black;
-}
-
-header #mainNavbar #navbarContainer .navItems{
-    text-transform: uppercase;
-    cursor: pointer;
+header #mainNavbar #navbarContainer .navItems {
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 header #mainNavbar #navbarContainer .navItems::after,
 header #mainNavbar #navbarContainer #menunavItem::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s;
-    width: 0%;
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s;
+  width: 0%;
 }
 
 header #mainNavbar #navbarContainer .navItems:hover::after,
-header #mainNavbar #navbarContainer #menunavItem::after{
-    width: 100%;
+header #mainNavbar #navbarContainer #menunavItem::after {
+  width: 100%;
 }
 
-main{
-    width: 100%;
+main {
+  width: 100%;
 }
 
-
-main #posterContaier::before{
-    background: url('../images/poster.jpg') no-repeat center center/cover;
-    content: '';
-    width: 100%;
-    height: 90%;
-    opacity: 0.8;
-    left: 0px;
-    top: 60px;
-    position: absolute;
-    z-index: -1;
-
+main #posterContaier::before {
+  background: url("../images/poster.jpg") no-repeat center center/cover;
+  content: "";
+  width: 100%;
+  height: 90%;
+  /* opacity: 0.8; */
+  left: 0px;
+  top: 60px;
+  position: absolute;
+  z-index: -1;
 }
 
-main #posterContaier div{
-    height: 630px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
+main #posterContaier div {
+  height: 630px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
 }
-main #posterContaier div h1{
-    text-transform: uppercase;
-    font-size: 70px;
-    color: white;
+main #posterContaier div h1 {
+  text-transform: uppercase;
+  font-size: 70px;
+  color: white;
+  font-style: italic;
 
-    /* tablet */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-        font-size: 60px;
-      }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        font-size: 40px;
-      }
-}
-
-main #secondaryNavigation{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    /* tablet */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        display: none;
-    }
+  /* tablet */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    font-size: 60px;
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    font-size: 40px;
+  }
 }
 
-main #secondaryNavigation  .menuItems{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-    cursor: pointer;
+main #secondaryNavigation {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  /* tablet */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    display: none;
+  }
 }
 
-main #secondaryNavigation  .menuItems:hover::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s;
-    width: 100%;
+main #secondaryNavigation .menuItems {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
 }
 
-main #breakfastContainer{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    /* tablets */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        flex-direction: column;
-    }
-    
+main #secondaryNavigation .menuItems:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s;
+  width: 100%;
 }
 
-main #breakfastContainer h1{
-    width: 100%;
-    text-align: center;
-    margin: 20px 0px 0px 0px;
+main #breakfastContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  /* tablets */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    flex-direction: column;
+  }
 }
 
-main #breakfastContainer .breakfastitems{
-    width: 30%;
-    height: 350px;
-    margin: 20px;
-    /* tablets */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-        width: 50%;
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        width: 88%;
-    }
+main #breakfastContainer h1 {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
 }
 
-main #breakfastContainer .breakfastitems img{
-    width: 100%;
-    height: 95%;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+main #breakfastContainer .breakfastitems {
+  width: 30%;
+  height: 350px;
+  margin: 20px;
+  /* tablets */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    width: 50%;
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    width: 88%;
+  }
 }
 
-main #breakfastContainer .breakfastitems img:hover{
-    transform: scale(1.05);
+main #breakfastContainer .breakfastitems img {
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-main #breakfastContainer .breakfastitems figcaption{
-    height: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
+main #breakfastContainer .breakfastitems img:hover {
+  transform: scale(1.05);
 }
 
-main #lunchContainer{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+main #breakfastContainer .breakfastitems figcaption {
+  height: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-main #lunchContainer h1{
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px 0px 0px;
+main #lunchContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-main #lunchContainer .lunchitems{
-    width: 30%;
-    height: 350px;
-    margin: 20px;
-
-    /* tablets */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-        width: 50%;
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        width: 88%;
-    }
+main #lunchContainer h1 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
 }
 
-main #lunchContainer .lunchitems img{
-    width: 100%;
-    height: 95%;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    
+main #lunchContainer .lunchitems {
+  width: 30%;
+  height: 350px;
+  margin: 20px;
+
+  /* tablets */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    width: 50%;
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    width: 88%;
+  }
 }
 
-main #lunchContainer .lunchitems img:hover{
-    transform: scale(1.05);
+main #lunchContainer .lunchitems img {
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-main #lunchContainer .lunchitems figcaption{
-    height: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
+main #lunchContainer .lunchitems img:hover {
+  transform: scale(1.05);
 }
 
-main #dinnerContainer{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+main #lunchContainer .lunchitems figcaption {
+  height: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-main #dinnerContainer h1{
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px 0px 0px;
+main #dinnerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-main #dinnerContainer .dinneritems{
-    width: 30%;
-    height: 350px;
-    margin: 20px;
-
-    /* tablets */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-        width: 50%;
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        width: 88%;
-    }
+main #dinnerContainer h1 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
 }
 
-main #dinnerContainer .dinneritems img{
-    width: 100%;
-    height: 95%;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+main #dinnerContainer .dinneritems {
+  width: 30%;
+  height: 350px;
+  margin: 20px;
+
+  /* tablets */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    width: 50%;
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    width: 88%;
+  }
 }
 
-main #dinnerContainer .dinneritems img:hover{
-    transform: scale(1.05);
+main #dinnerContainer .dinneritems img {
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-main #dinnerContainer .dinneritems figcaption{
-    height: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
+main #dinnerContainer .dinneritems img:hover {
+  transform: scale(1.05);
 }
 
-main #dessertContainer{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+main #dinnerContainer .dinneritems figcaption {
+  height: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-main #dessertContainer h1{
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px 0px 0px;
+main #dessertContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-main #dessertContainer .dessertitems{
-    width: 30%;
-    height: 350px;
-    margin: 20px;
-
-    /* tablets */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-        width: 50%;
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        width: 88%;
-    }
+main #dessertContainer h1 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
 }
 
-main #dessertContainer .dessertitems img{
-    width: 100%;
-    height: 95%;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+main #dessertContainer .dessertitems {
+  width: 30%;
+  height: 350px;
+  margin: 20px;
+
+  /* tablets */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    width: 50%;
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    width: 88%;
+  }
 }
 
-main #dessertContainer .dessertitems img:hover{
-    transform: scale(1.05);
+main #dessertContainer .dessertitems img {
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-main #dessertContainer .dessertitems figcaption{
-    height: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
+main #dessertContainer .dessertitems img:hover {
+  transform: scale(1.05);
 }
 
-main #beveragesContainer{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+main #dessertContainer .dessertitems figcaption {
+  height: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-main #beveragesContainer h1{
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px 0px 0px;
+main #beveragesContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-main #beveragesContainer .beveragesitems{
-    width: 30%;
-    height: 350px;
-    margin: 20px;
-
-    /* tablets */
-    @media screen and (max-width : 768px) and (min-width: 481px) {
-        width: 50%;
-    }
-      /* mobile */
-    @media screen and (max-width: 481px) {
-        width: 88%;
-    }
+main #beveragesContainer h1 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
 }
 
-main #beveragesContainer .beveragesitems img{
-    width: 100%;
-    height: 95%;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+main #beveragesContainer .beveragesitems {
+  width: 30%;
+  height: 350px;
+  margin: 20px;
+
+  /* tablets */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    width: 50%;
+  }
+  /* mobile */
+  @media screen and (max-width: 481px) {
+    width: 88%;
+  }
 }
 
-main #beveragesContainer .beveragesitems img:hover{
-    transform: scale(1.05);
+main #beveragesContainer .beveragesitems img {
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s;
 }
 
-main #beveragesContainer .beveragesitems figcaption{
-    height: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
+main #beveragesContainer .beveragesitems img:hover {
+  transform: scale(1.05);
 }
 
-hr{
-    width: 95%;
-    border: none;
-    height: 3px;
-    background-color: black;
+main #beveragesContainer .beveragesitems figcaption {
+  height: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+hr {
+  width: 95%;
+  border: none;
+  height: 3px;
+  background-color: black;
 }
 
 .footer {
@@ -476,7 +482,7 @@ hr{
   flex-direction: column;
   background-color: black;
   width: 100%;
-  color: white; 
+  color: white;
   margin-top: 25px;
 }
 
