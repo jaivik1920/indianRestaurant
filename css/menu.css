@@ -5,22 +5,116 @@
     font-family: 'EB Garamond', serif;
 }
 
+
+.contactContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    transition: width 4s, display 4s;
+    display: none;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  }
+  .fadeIn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transition: width 4s, display 4s;
+  }
+  
+  .close {
+    text-align: right;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .close img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .mainCloseContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+  }
+  .closeHeader {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  
+  .closeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+  .closeContainer p {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  
+  .closeContainer a {
+    color: black;
+    text-decoration: none;
+  }
+
 header{
     width: 100%;
 }
 
 header #mainNavbar{
+    display: flex;
     width: 100%;
+}
+
+header #mainNavbar #logoDiv{
+    width: 15%;
+    /* background: linear-gradient(to bottom right, white,#EFFBFF); */
+    margin: 5px 0px 0px 10px;
+    cursor: pointer;
+
+     /* tablets */
+    @media screen and (max-width : 1400px) and (min-width: 481px) {
+        display: none;
+    } 
+      /* mobile */
+     @media screen and (max-width: 481px) { 
+        display: none;
+    } 
+}
+
+header #mainNavbar #logoDiv a{
+    text-decoration: none;
+    color: black;
+}
+
+header #mainNavbar #logoDiv span{
+    color: orangered;
+    font-weight: bolder;
 }
 
 header #mainNavbar #navbarContainer{
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 62px;
     justify-content: center;
     gap: 40px;
     padding: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 header #mainNavbar #navbarContainer a{
@@ -33,12 +127,18 @@ header #mainNavbar #navbarContainer .navItems{
     cursor: pointer;
 }
 
-header #mainNavbar #navbarContainer .navItems:hover::after {
+header #mainNavbar #navbarContainer .navItems::after,
+header #mainNavbar #navbarContainer #menunavItem::after {
     content: '';
     display: block;
     height: 2px;
     background-color: black;
     transition: width 0.3s;
+    width: 0%;
+}
+
+header #mainNavbar #navbarContainer .navItems:hover::after,
+header #mainNavbar #navbarContainer #menunavItem::after{
     width: 100%;
 }
 
@@ -46,12 +146,57 @@ main{
     width: 100%;
 }
 
-main #secondaryNavigation{
+
+main #posterContaier::before{
+    background: url('../images/poster.jpg') no-repeat center center/cover;
+    content: '';
+    width: 100%;
+    height: 90%;
+    opacity: 0.8;
+    left: 0px;
+    top: 60px;
+    position: absolute;
+    z-index: -1;
+
+}
+
+main #posterContaier div{
+    height: 630px;
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 20px 0px;
-    gap: 40px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+main #posterContaier div h1{
+    text-transform: uppercase;
+    font-size: 70px;
+    color: white;
+
+    /* tablet */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+        font-size: 60px;
+      }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        font-size: 40px;
+      }
+}
+
+main #secondaryNavigation{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    /* tablet */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        display: none;
+    }
 }
 
 main #secondaryNavigation  .menuItems{
@@ -72,144 +217,282 @@ main #secondaryNavigation  .menuItems:hover::after {
 
 main #breakfastContainer{
     display: flex;
-    flex-direction: column;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+
+    /* tablets */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        flex-direction: column;
+    }
+    
 }
 
-main #breakfastContainer .breakfastitems {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
+main #breakfastContainer h1{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+main #breakfastContainer .breakfastitems{
+    width: 30%;
+    height: 350px;
+    margin: 20px;
+    /* tablets */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+        width: 50%;
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        width: 88%;
+    }
 }
 
 main #breakfastContainer .breakfastitems img{
-    width: 30%;
-    height: 220px;
+    width: 100%;
+    height: 95%;
     object-fit: cover;
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 main #breakfastContainer .breakfastitems img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-main #breakfastContainer .breakfastitems .itemDetails{
-    margin: 0px 40px;
-    width: 70%;
-    font-size: 18px;
-}
-
-main #breakfastContainer .breakfastitems .itemDetails ul {
-    margin: 0px 30px;
+main #breakfastContainer .breakfastitems figcaption{
+    height: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 main #lunchContainer{
-    display: none;
-    flex-direction: column;
+    display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 }
-main #lunchContainer .lunchitems {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
+
+main #lunchContainer h1{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
 }
-main #lunchContainer .lunchitems img{
+
+main #lunchContainer .lunchitems{
     width: 30%;
-    height: 220px;
+    height: 350px;
+    margin: 20px;
+
+    /* tablets */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+        width: 50%;
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        width: 88%;
+    }
+}
+
+main #lunchContainer .lunchitems img{
+    width: 100%;
+    height: 95%;
     object-fit: cover;
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    
 }
 
 main #lunchContainer .lunchitems img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-main #lunchContainer .lunchitems .itemDetails{
-    margin: 0px 40px;
-    width: 70%;
-    font-size: 18px;
-}
-
-main #lunchContainer .lunchitems .itemDetails ul{
-    margin: 0px 30px;
+main #lunchContainer .lunchitems figcaption{
+    height: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 main #dinnerContainer{
-    display: none;
-    flex-direction: column;
+    display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 }
-main #dinnerContainer .dinnneritems {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
+
+main #dinnerContainer h1{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
 }
-main #dinnerContainer .dinnneritems img{
+
+main #dinnerContainer .dinneritems{
     width: 30%;
-    height: 220px;
+    height: 350px;
+    margin: 20px;
+
+    /* tablets */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+        width: 50%;
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        width: 88%;
+    }
+}
+
+main #dinnerContainer .dinneritems img{
+    width: 100%;
+    height: 95%;
     object-fit: cover;
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-main #dinnerContainer .dinnneritems img:hover{
-    transform: scale(1.1);
+main #dinnerContainer .dinneritems img:hover{
+    transform: scale(1.05);
 }
 
-main #dinnerContainer .dinnneritems .itemDetails{
-    margin: 0px 40px;
-    width: 70%;
-    font-size: 18px;
-}
-
-main #dinnerContainer .dinnneritems .itemDetails ul{
-    margin: 0px 30px;
+main #dinnerContainer .dinneritems figcaption{
+    height: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 main #dessertContainer{
-    display: none;
-    flex-direction: column;
+    display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-main #dessertContainer .dessertitems {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
+main #dessertContainer h1{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
 }
-main #dessertContainer .dessertitems img{
+
+main #dessertContainer .dessertitems{
     width: 30%;
-    height: 220px;
+    height: 350px;
+    margin: 20px;
+
+    /* tablets */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+        width: 50%;
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        width: 88%;
+    }
+}
+
+main #dessertContainer .dessertitems img{
+    width: 100%;
+    height: 95%;
     object-fit: cover;
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-
 main #dessertContainer .dessertitems img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-main #dessertContainer .dessertitems .itemDetails{
-    margin: 0px 40px;
-    width: 70%;
-    font-size: 18px;
+main #dessertContainer .dessertitems figcaption{
+    height: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-main #dessertContainer .dessertitems .itemDetails ul{
-    margin: 0px 30px;
+main #beveragesContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main #beveragesContainer h1{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+}
+
+main #beveragesContainer .beveragesitems{
+    width: 30%;
+    height: 350px;
+    margin: 20px;
+
+    /* tablets */
+    @media screen and (max-width : 768px) and (min-width: 481px) {
+        width: 50%;
+    }
+      /* mobile */
+    @media screen and (max-width: 481px) {
+        width: 88%;
+    }
+}
+
+main #beveragesContainer .beveragesitems img{
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main #beveragesContainer .beveragesitems img:hover{
+    transform: scale(1.05);
+}
+
+main #beveragesContainer .beveragesitems figcaption{
+    height: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+hr{
+    width: 95%;
+    border: none;
+    height: 3px;
+    background-color: black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  color: white; 
+  margin-top: 25px;
+}
+
+.firstFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.firstFooter p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.firstFooter span {
+  letter-spacing: 2px;
 }
