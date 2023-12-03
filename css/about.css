@@ -1,4 +1,344 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header span {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s;
+}
+
+.header span:hover::after {
+  width: 100%;
+}
+.contactContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+  transition: width 4s, display 4s;
+  display: none;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.fadeIn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transition: width 4s, display 4s;
+}
+
+.close {
+  text-align: right;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.close img {
+  width: 15px;
+  height: 15px;
+}
+
+.mainCloseContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+.closeHeader {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.closeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 2px;
+  gap: 10px;
+}
+.closeContainer p {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.closeContainer a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.firstContainer {
+  background-image: url("../images/dishes/mainDish.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  filter: blur(6px);
+  -webkit-filter: blur(2px);
+}
+
+.box {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+
+  @media screen and (max-width: 490px) {
+    left: 25%;
+  }
+}
+
+.box h1 {
+  margin: 0;
+  text-align: left;
+  font-size: 70px;
+  color: white;
+  font-style: italic;
+
+  @media screen and (max-width: 767px) {
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 50px;
+  }
+}
+
+.secondContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+  height: 400px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    height: unset;
+  }
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftContainer p {
+  font-style: italic;
+  color: darkorange;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.leftContainer span {
+  font-size: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.rightContainer {
+  margin-top: 100px;
+  max-width: 400px;
+  width: 100%;
+  justify-self: end;
+}
+
+.rightContainer span {
+  font-size: 16px;
+}
+
+.thirdContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.galleryHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 5px 0px;
+  border-bottom: 1px solid black;
+}
+
+.galleryHeader span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mainGallery {
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  border-radius: 3px;
+  @media screen and (max-width: 767px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.card span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: transparent;
+}
+.card span:hover {
+  color: white;
+}
+
+.card1 {
+  background-image: url("../images/breakfast/fafda\ jalebi.jpg");
+}
+
+.card2 {
+  background-image: url("../images/breakfast/pyazzkachori.jpg");
+}
+
+.card3 {
+  background-image: url("../images/breakfast/idli.jpg");
+}
+
+.card4 {
+  background-image: url("../images/lunch/pavbhaji.jpg");
+}
+.card5 {
+  background-image: url("../images/lunch/sambharrice.jpg");
+}
+.card6 {
+  background-image: url("../images/lunch/paneerbuttermasala.jpg");
+}
+.card7 {
+  background-image: url("../images/dinner/shorsheilish.jpg");
+}
+.card8 {
+  background-image: url("../images/dinner/dosa.webp");
+}
+.card9 {
+  background-image: url("../images/dinner/chickencurry.avif");
+}
+
+.card1 :hover,
+.card2 :hover,
+.card3 :hover,
+.card4 :hover,
+.card5 :hover,
+.card6 :hover,
+.card7 :hover,
+.card8 :hover,
+.card9 :hover {
+  backdrop-filter: blur(1px);
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+
+.firstFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.firstFooter p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.firstFooter span {
+  letter-spacing: 2px;
+}
