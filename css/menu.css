@@ -70,18 +70,146 @@ main #secondaryNavigation  .menuItems:hover::after {
     width: 100%;
 }
 
-main #secondaryNavigation #breakfastContainer{
+main #breakfastContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
 }
 
-main #secondaryNavigation #lunchContainer{
-    display: none;
+main #breakfastContainer .breakfastitems {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
 
+main #breakfastContainer .breakfastitems img{
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
-main #secondaryNavigation #dinnerContainer{
-    display: none;
+
+main #breakfastContainer .breakfastitems img:hover{
+    transform: scale(1.1);
 }
-main #secondaryNavigation #dessertContainer{
+
+main #breakfastContainer .breakfastitems .itemDetails{
+    margin: 0px 40px;
+    width: 70%;
+    font-size: 18px;
+}
+
+main #breakfastContainer .breakfastitems .itemDetails ul {
+    margin: 0px 30px;
+}
+
+main #lunchContainer{
     display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+main #lunchContainer .lunchitems {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+main #lunchContainer .lunchitems img{
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main #lunchContainer .lunchitems img:hover{
+    transform: scale(1.1);
+}
+
+main #lunchContainer .lunchitems .itemDetails{
+    margin: 0px 40px;
+    width: 70%;
+    font-size: 18px;
+}
+
+main #lunchContainer .lunchitems .itemDetails ul{
+    margin: 0px 30px;
+}
+
+main #dinnerContainer{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+main #dinnerContainer .dinnneritems {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+main #dinnerContainer .dinnneritems img{
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main #dinnerContainer .dinnneritems img:hover{
+    transform: scale(1.1);
+}
+
+main #dinnerContainer .dinnneritems .itemDetails{
+    margin: 0px 40px;
+    width: 70%;
+    font-size: 18px;
+}
+
+main #dinnerContainer .dinnneritems .itemDetails ul{
+    margin: 0px 30px;
+}
+
+main #dessertContainer{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+main #dessertContainer .dessertitems {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+main #dessertContainer .dessertitems img{
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+main #dessertContainer .dessertitems img:hover{
+    transform: scale(1.1);
+}
+
+main #dessertContainer .dessertitems .itemDetails{
+    margin: 0px 40px;
+    width: 70%;
+    font-size: 18px;
+}
+
+main #dessertContainer .dessertitems .itemDetails ul{
+    margin: 0px 30px;
 }
