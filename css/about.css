@@ -41,7 +41,8 @@ body {
   transition: width 0.3s;
 }
 
-.header span:hover::after {
+.header span:hover::after,
+.header #aboutnavItem span::after {
   width: 100%;
 }
 .contactContainer {

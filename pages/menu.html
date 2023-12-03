@@ -11,14 +11,54 @@
     />
 </head>
 <body>
-
+    <div class="contactContainer" id="contact">
+        <div class="close">
+          <span onclick="fadeOut()">
+            <img src="../images/close_icon.png" alt="close-icon" />
+          </span>
+        </div>
+        <div class="mainCloseContainer">
+          <div class="closeHeader">new hours</div>
+          <div class="closeContainer">
+            <span>MONDAY - TUESDAY</span>
+            <span>12:00 PM to 9:00 PM</span>
+          </div>
+          <div class="closeContainer">
+            <span>WEDNESDAY - SUNDAY</span>
+            <span>12:00 PM to 10:00 PM</span>
+          </div>
+          <div class="closeContainer">
+            <img src="../images/phone_icon.png" alt="" width="15px" />
+            <p>Call Now</p>
+            <a href="tel:+16473912231">647.391.2231</a>
+            <a href="tel:+19055989414">905.598.9414</a>
+          </div>
+          <div class="closeContainer">
+            <img src="../images/location_icon.png" alt="location_icon" width="15px">
+            <p>Direction Header</p>
+            <span>121 Brunel Rd, Mississauga</span>
+          </div>
+          <div class="closeContainer">
+            <img src="../images/message_icon.png" alt="" width="15px" />
+            <p>Message Here</p>
+            <a href="mailto:C0902999@mylambton.ca">C0902999@mylambton.ca</a>
+            <a href="mailto:C0903001@mylambton.ca">C0903001@mylambton.ca</a>
+          </div>
+        </div>
+      </div>
     <header>
         <nav id="mainNavbar">
+            <div id="logoDiv">
+                <a href="../index.html">
+                    <h3>The Indian Restaurant</h3>
+                    <p>We would like to say <span>"Padhariye!"</span> </p>
+                </a>
+            </div>
             <div id="navbarContainer">
                 <a href="../index.html">
                     <span class="navItems">Home</span>
                   </a>
-                  <a href="./menu.html">
+                  <a href="./menu.html" id="menunavItem">
                     <span class="navItems">Menu</span>
                   </a>
                   <a href="./about.html">
@@ -29,269 +69,163 @@
         </nav>
     </header>
     <main>
+        <div id="posterContaier">
+            <div>
+                <h1>our menu</h1>
+            </div>
+        </div>
         <nav id="secondaryNavigation">
-            <span class="menuItems" onclick="showMenus('breakfastContainer')">Breakfast</span>
-            <span class="menuItems" onclick="showMenus('lunchContainer')">Lunch</span>
-            <span class="menuItems" onclick="showMenus('dinnerContainer')">Dinner</span>
-            <span class="menuItems" onclick="showMenus('dessertContainer')">Dessert</span>
+            <a href="#breakfastContainer" class="menuItems" id="breakfast">Breakfast </a>
+            <a href="#lunchContainer" class="menuItems" id="lunch">Lunch</a>
+            <a href="#dinnerContainer" class="menuItems" id="dinner">Dinner</a>
+            <a href="#dessertContainer" class="menuItems" id="dessert">Dessert</a>
+            <a href="#beveragesContainer" class="menuItems" id="beverages">Beverages</a>
         </nav>
         <div id="breakfastContainer">
-            <div class="breakfastitems">
+            <h1>Breakfast</h1>
+            <hr>
+            <figure class="breakfastitems">
                 <img src="../images/breakfast/fafda jalebi.avif" alt="Fafa and Jalebi">
-                <div class="itemDetails">
-                    <h3>FAFA AND JALEBI</h3>
-                    <p>Type: West Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Besan (Gram Flour)</li>
-                        <li>Maida (All-Purpose Flour)</li>
-                        <li>Yogurt</li>
-                        <li>Ghee or Oil</li>
-                        <li>Carom Seeds and Powder</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="breakfastitems">
+                <figcaption>Fafada and Jalebi</figcaption>
+            </figure>
+            <figure class="breakfastitems">
                 <img src="../images/breakfast/lochiwithdumaloo.jpg" alt="Luchi with Aloo Dum">
-                <div class="itemDetails">
-                    <h3>LUCHI WITH ALOO DUM</h3>
-                    <p>Type: East Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Maida (All-Purpose Flour)</li>
-                        <li>Baby Potatoes</li>
-                        <li>Tomatoes</li>
-                        <li>Kasuri Methi (Dried Fenugreek Leaves)</li>
-                        <li>Vegetable Oil or Ghee</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="breakfastitems">
+                <figcaption>LUCHI WITH ALOO DUM</figcaption>
+            </figure>
+            <figure class="breakfastitems">
                 <img src="../images/breakfast/pyazzkachori.jpg" alt="Pyaaz Kachori">
-                <div class="itemDetails">
-                    <h3>PYAAZ KACHORI</h3>
-                    <p>Type: North Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Maida (All-Purpose Flour)</li>
-                        <li>Onions (Pyaz)</li>
-                        <li>Moong Dal (Split Yellow Lentils)</li>
-                        <li>Fennel Seeds (Saunf)</li>
-                        <li>Vegetable Oil</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="breakfastitems">
+                <figcaption>PYAAZ KACHORI</figcaption>
+            </figure>
+            <figure class="breakfastitems">
+                <img src="../images/breakfast/khamandhokla.webp" alt="khaman dhokla">
+                <figcaption>khaman dhokla</figcaption>
+            </figure>
+            <figure class="breakfastitems">
                 <img src="../images/breakfast/idli.jpg" alt="Idli">
-                <div class="itemDetails">
-                    <h3>IDLI</h3>
-                    <p>Type: South Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Idli Rice</li>
-                        <li>Urad Dal (Split Black Gram)</li>
-                        <li>Fenugreek Seeds (Methi)</li>
-                        <li>Poha (Flattened Rice)</li>
-                        <li>Salt</li>
-                    </ul>
-                </div>
-            </div>
+                <figcaption>IDLI</figcaption>
+            </figure>
+            <figure class="breakfastitems">
+                <img src="../images/breakfast/alooparatha.jpg" alt="aloo paratha">
+                <figcaption>aloo paratha</figcaption>
+            </figure>
         </div>
         <div id="lunchContainer">
-            <div class="lunchitems">
+            <h1>Lunch</h1>
+            <hr>
+            <figure class="lunchitems">
                 <img src="../images/lunch/pavbhaji.jpg" alt="PAV BHAJI">
-                <div class="itemDetails">
-                    <h3>PAV BHAJI</h3>
-                    <p>Type: West Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Potatoes</li>
-                        <li>Mixed Vegetables</li>
-                        <li>Tomatoes</li>
-                        <li>Onions</li>
-                        <li>Pav (Bread Rolls)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="lunchitems">
+                <figcaption>PAV BHAJI</figcaption>
+            </figure>
+            <figure class="lunchitems">
                 <img src="../images/lunch/machharjhol.jpg" alt="MACHHER JHOL">
-                <div class="itemDetails">
-                    <h3>MACHHER JHOL</h3>
-                    <p>Type: East Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Fish</li>
-                        <li>Onions and Tomatoes</li>
-                        <li>Bay Leaves</li>
-                        <li>Mustard Paste</li>
-                        <li>Green Coriander (Cilantro)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="lunchitems">
+                <figcaption>MACHHER JHOL</figcaption>
+            </figure>
+            <figure class="lunchitems">
                 <img src="../images/lunch/sambharrice.jpg" alt="SAMBHAR RICE">
-                <div class="itemDetails">
-                    <h3>SAMBHAR RICE</h3>
-                    <p>Type: South Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Rice</li>
-                        <li>Toor Dal (Pigeon Pea Lentils)</li>
-                        <li>Vegetables</li>
-                        <li>Sambar Powder</li>
-                        <li>Curry Leaves</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="lunchitems">
+                <figcaption>SAMBHAR RICE</figcaption>
+            </figure>
+            <figure class="lunchitems">
+                <img src="../images/lunch/biryani.jpg" alt="hyderabadi biryani">
+                <figcaption>hyderabani biryani</figcaption>
+            </figure>
+            <figure class="lunchitems">
                 <img src="../images/lunch/paneerbuttermasala.jpg" alt="PANEER BUTTER MASALA">
-                <div class="itemDetails">
-                    <h3>PANEER BUTTER MASALA</h3>
-                    <p>Type: North Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Paneer (Indian Cottage Cheese)</li>
-                        <li>Tomatoes and Onions</li>
-                        <li>Ginger-Garlic Paste</li>
-                        <li>Kasuri Methi (Dried Fenugreek Leaves)</li>
-                        <li>Butter and Oil</li>
-                    </ul>
-                </div>
-            </div>
+                <figcaption>PANEER BUTTER MASALA</figcaption>
+            </figure>
+            <figure class="lunchitems">
+                <img src="../images/lunch/undhiyu.jpg" alt="undhiyu">
+                <figcaption>undhiyu</figcaption>
+            </figure>
         </div>
         <div id="dinnerContainer">
-            <div class="dinnneritems">
+            <h1>Dinner</h1>
+            <hr>
+            <figure class="dinneritems">
                 <img src="../images/dinner/puranpoli.jpg" alt="PURAN POLI">
-                <div class="itemDetails">
-                    <h3>PURAN POLI</h3>
-                    <p>Type: West Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Chana Dal (Split Chickpeas)</li>
-                        <li>Whole Wheat Flour</li>
-                        <li>Ghee (Clarified Butter)</li>
-                        <li>Jaggery</li>
-                        <li>Cardamom Powder</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dinnneritems">
+                <figcaption>PURAN POLI</figcaption>
+            </figure>
+            <figure class="dinneritems">
+                <img src="../images/dinner/riganbharatu.webp" alt="rigan bhartu">
+                <figcaption>rigan bhartu</figcaption>
+            </figure>
+            <figure class="dinneritems">
                 <img src="../images/dinner/shorsheilish.jpg" alt="SHORSHE ILISH">
-                <div class="itemDetails">
-                    <h3>SHORSHE ILISH</h3>
-                    <p>Type: East Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Hilsa Fish</li>
-                        <li>Mustard Paste</li>
-                        <li>Green Chilies</li>
-                        <li>Green Coriander (Cilantro)</li>
-                        <li>Sugar</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dinnneritems">
+                <figcaption>SHORSHE ILISH</figcaption>
+            </figure>
+            <figure class="dinneritems">
                 <img src="../images/dinner/dosa.webp" alt="DOSA WITH SAMBAR AND COCONUT CHUTNEY">
-                <div class="itemDetails">
-                    <h3>DOSA WITH SAMBAR AND COCONUT CHUTNEY</h3>
-                    <p>Type: South Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Rice</li>
-                        <li>Urad Dal (Black Gram)</li>
-                        <li>Grated Coconut</li>
-                        <li>Toor Dal</li>
-                        <li>Vegetables</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dinnneritems">
+                <figcaption>DOSA WITH SAMBAR AND COCONUT CHUTNEY</figcaption>
+            </figure>
+            <figure class="dinneritems">
                 <img src="../images/dinner/chickencurry.avif" alt="CHICKEN CURRY WITH NAAN">
-                <div class="itemDetails">
-                    <h3>CHICKEN CURRY WITH NAAN</h3>
-                    <p>Type: North Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Chicken</li>
-                        <li>Naan</li>
-                        <li>Onions and Tomatoes</li>
-                        <li>Ginger-Garlic Paste</li>
-                        <li>Oil or Ghee</li>
-                    </ul>
-                </div>
-            </div>
+                <figcaption>CHICKEN CURRY WITH NAAN</figcaption>
+            </figure>
         </div>
         <div id="dessertContainer">
-            <div class="dessertitems">
+            <h1>Dessert</h1>
+            <hr>
+            <figure class="dessertitems">
                 <img src="../images/dessert/gulamjamun.jpg" alt="GULAB JAMUN">
-                <div class="itemDetails">
-                    <h3>GULAB JAMUN</h3>
-                    <p>Type: West Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Khoya (Mawa)</li>
-                        <li>All-Purpose Flour (Maida)</li>
-                        <li>Paneer (Indian Cottage Cheese)</li>
-                        <li>Sugar</li>
-                        <li>Saffron Strands</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dessertitems">
-                <img src="../images/dessert/rasgulla.jpg" alt="RASGULLA">
-                <div class="itemDetails">
-                    <h3>RASGULLA</h3>
-                    <p>Type: East Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Besan (Gram Flour)</li>
-                        <li>Maida (All-Purpose Flour)</li>
-                        <li>Yogurt</li>
-                        <li>Cardamom Powder</li>
-                        <li>Carom Seeds and Powder</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dessertitems">
+                <figcaption>GULAB JAMUN</figcaption>
+            </figure>
+            <figure class="dessertitems">
+                <img src="../images/dessert/rasgulla.jpg" alt="RASGULLA">   
+                <figcaption>RASGULLA</figcaption>
+            </figure>
+            <figure class="dessertitems">
                 <img src="../images/dessert/myshorpak.jpg" alt="MYSORE PAK">
-                <div class="itemDetails">
-                    <h3>MYSORE PAK</h3>
-                    <p>Type: South Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Gram Flour (Besan)</li>
-                        <li>Ghee (Clarified Butter)</li>
-                        <li>Sugar</li>
-                        <li>Water</li>
-                        <li>Baking Soda</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="dessertitems">
+                <figcaption>MYSORE PAK</figcaption>
+            </figure>
+            <figure class="dessertitems">
                 <img src="../images/dessert/rabdi.jpg" alt="RABDI">
-                <div class="itemDetails">
-                    <h3>RABDI</h3>
-                    <p>Type: North Indian</p>
-                    <h3>Main Ingredients</h3>
-                    <ul>
-                        <li>Full-Fat Milk</li>
-                        <li>Sugar</li>
-                        <li>Cardamom Powder</li>
-                        <li>Rose Water</li>
-                        <li>Chopped Nuts (like almonds and pistachios)</li>
-                    </ul>
-                </div>
-            </div>
+                <figcaption>RABDI</figcaption>
+            </figure>
+        </div>
+        <div id="beveragesContainer">
+            <h1>Beverages</h1>
+            <hr>
+            <figure class="beveragesitems">
+                <img src="../images/beverages/chai.jpg" alt="masala chai">
+                <figcaption>masala chai</figcaption>
+            </figure>
+            <figure class="beveragesitems">
+                <img src="../images/beverages/faluda.jpg" alt="faluda">
+                <figcaption>faluda</figcaption>
+            </figure>
+            <figure class="beveragesitems">
+                <img src="../images/beverages/lassi.webp" alt="lassi">
+                <figcaption>lassi</figcaption>
+            </figure>
+            <figure class="beveragesitems">
+                <img src="../images/beverages/thandai.jpg" alt="thandai">
+                <figcaption>thandai</figcaption>
+            </figure>
+            <figure class="beveragesitems">
+                <img src="../images/beverages/kashmirikahwa.png" alt="kashmiri kahva">
+                <figcaption>kashimiri kahva</figcaption>
+            </figure>
+            <figure class="beveragesitems">
+                <img src="../images/beverages/solkadhi.jpg" alt="sol kadhi">
+                <figcaption>sol kadhi</figcaption>
+            </figure>
         </div>
     </main>
 
+    <footer class="footer">
+        <div class="firstFooter">
+          <p>The Indian Restaurant</p>
+          <span>121 Brunel Rd | Mississauga, ON</span>
+          <span>647.391.2231 | 905.598.9414</span>
+        </div>
+        <div class="lastFooter"></div>
+    </footer>
+
     <script>
-        function showMenus(container) {
-            document.getElementById('dinnerContainer').style.display = 'none'
-            document.getElementById('lunchContainer').style.display = 'none'
-            document.getElementById('breakfastContainer').style.display = 'none'
-            document.getElementById('dessertContainer').style.display = 'none'
-            document.getElementById(container).style.display = 'flex';
+        function fadeIn() {
+          document.getElementById("contact").classList.add("fadeIn");
+        }
+        function fadeOut() {
+          document.getElementById("contact").classList.remove("fadeIn");
         }
     </script>
     
