@@ -85,7 +85,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .closeHeader {
   font-size: 40px;
@@ -103,6 +103,11 @@ body {
   margin: 0px;
   font-size: 12px;
   font-weight: 800;
+}
+
+.closeContainer a {
+  color: black;
+  text-decoration: none;
 }
 
 .mainContainer {
@@ -151,8 +156,8 @@ body {
   gap: 30px;
   padding: 30px;
   height: 400px;
+  flex-wrap: wrap;
   @media screen and (max-width: 767px) {
-    flex-direction: column;
     height: unset;
   }
 }
@@ -185,7 +190,8 @@ body {
 }
 .card1 :hover,
 .card2 :hover,
-.card3 :hover {
+.card3 :hover,
+.card4 :hover {
   backdrop-filter: blur(10px);
 }
 .card1 {
@@ -198,9 +204,14 @@ body {
   background: url("../images/card3.jpg");
 }
 
+.card4 {
+  background: url("../images/card4.jpg");
+}
+
 .card1,
 .card2,
-.card3 {
+.card3,
+.card4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -348,6 +359,8 @@ body {
 
 .firstFooter p {
   text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
 }
 
 .firstFooter span {

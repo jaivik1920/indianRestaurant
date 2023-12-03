@@ -1,178 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | The Indian Restaurant</title>
-    <!-- font for google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="contactContainer" id="contact">
-        <div class="close">
-          <span onclick="fadeOut()">
-            <img src="./images/close_icon.png" alt="close-icon" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | The Indian Restaurant</title>
+  <!-- font for google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,700;1,800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="contactContainer" id="contact">
+      <div class="close">
+        <span onclick="fadeOut()">
+          <img src="./images/close_icon.png" alt="close-icon" />
+        </span>
+      </div>
+      <div class="mainCloseContainer">
+        <div class="closeHeader">new hours</div>
+        <div class="closeContainer">
+          <span>MONDAY - TUESDAY</span>
+          <span>12:00 PM to 9:00 PM</span>
+        </div>
+        <div class="closeContainer">
+          <span>WEDNESDAY - SUNDAY</span>
+          <span>12:00 PM to 10:00 PM</span>
+        </div>
+        <div class="closeContainer">
+          <img src="./images/phone_icon.png" alt="" width="15px" />
+          <p>Call Now</p>
+          <a href="tel:+16473912231">647.391.2231</a>
+          <a href="tel:+19055989414">905.598.9414</a>
+        </div>
+        <div class="closeContainer">
+          <img src="./images/location_icon.png" alt="location_icon" width="15px">
+          <p>Direction Header</p>
+          <span>121 Brunel Rd, Mississauga</span>
+        </div>
+        <div class="closeContainer">
+          <img src="./images/message_icon.png" alt="" width="15px" />
+          <p>Message Here</p>
+          <a href="mailto:C0902999@mylambton.ca">C0902999@mylambton.ca</a>
+          <a href="mailto:C0903001@mylambton.ca">C0903001@mylambton.ca</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="header">
+      <span>Home</span>
+      </a>
+      <a href="./pages/menu.html">
+        <span>Menu</span>
+      </a>
+      <a href="./pages/about.html">
+        <span>About</span>
+      </a>
+      <span onclick="fadeIn()"> Contact </span>
+    </nav>
+
+    <main class="mainContainer">
+      <div class="firstContainer">
+        <div class="box">
+          <h1>The</h1>
+          <h1>Indian</h1>
+          <h1>Restaurant</h1>
+        </div>
+      </div>
+      <div class="secondContainer">
+        <div class="card card1">
+          <span>breakfast</span>
+        </div>
+        <div class="card card2">
+          <span>lunch</span>
+        </div>
+        <div class="card card4">
+          <span>dinner</span>
+        </div>
+        <div class="card card3">
+          <span> dessert </span>
+        </div>
+      </div>
+      <div class="famousContainer">
+        <div class="famousHeader">
+          <span> The Famous Dishes </span>
+        </div>
+        <div class="famousDishes">
+          <div class="famousDish">
+            <div class="leftDish">
+              <img src="./images/dishes/dosa.webp" alt="dosa" />
+            </div>
+            <div class="rightDish">
+              <p>Dosa</p>
+              <span> Fond of Stuffed dosas? </span>
+              <span> Then Try this delicious protiein-rich dosa </span>
+            </div>
+          </div>
+          <div class="famousDish revDish">
+            <div class="rightDish">
+              <p>Kathiyawadi Dish</p>
+              <span>
+                Enjoy a beautiful blend of eich spices ad culinary
+              </span>
+              <span> from Gujarat's royal Kathiawar region. </span>
+            </div>
+            <div class="leftDish">
+              <img src="./images/dishes/kathiyawadi.webp" alt="kathiyawadi" />
+            </div>
+          </div>
+          <div class="famousDish">
+            <div class="leftDish">
+              <img src="./images/dishes/daalbati.jpg" alt="dosa" />
+            </div>
+            <div class="rightDish">
+              <p>Rajasthani Dal Bati Churma</p>
+              <span>Wheat balls served with spicy lentils & Ghee!</span>
+              <span>A Traditional Dish from the state of Rajasthan in India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviewContainer">
+        <div class="reviewBox">
+          <div class="profile">
+            <img src="./images/avtar1-_icon.png" alt="avtar" />
+          </div>
+          <p>"It surpassed all my expectations!"</p>
+          <span>
+            The food looks like it has been prepared for a culinary magazine.
+            While in Toronto City add Indian Restaurant as a culinary
+            experience. It will be a good place to take a date to or get
+            together with some friends. You will not be disappointed.
           </span>
         </div>
-        <div class="mainCloseContainer">
-          <div class="closeHeader">new hours</div>
-          <div class="closeContainer">
-            <span>MONDAY - TUESDAY</span>
-            <span>12:00 PM to 9:00 PM</span>
+        <div class="reviewBox">
+          <div class="profile">
+            <img src="./images/avtar1-_icon.png" alt="avtar" />
           </div>
-          <div class="closeContainer">
-            <span>WEDNESDAY - SUNDAY</span>
-            <span>12:00 PM to 10:00 PM</span>
+          <p>"Best vegetarian restaurant... EVER"</p>
+          <span>
+            I absolutely love this place. The Dosas are the best things
+            ever!!! I've been a veggie for 22 years now and never had Dosas,
+            Paneer Chillie etc so to get all this as a veggie option is
+            fantastic! I go to this place every time I'm in Toronto :)
+          </span>
+        </div>
+        <div class="reviewBox">
+          <div class="profile">
+            <img src="./images/avtar1-_icon.png" alt="avtar" />
           </div>
-          <div class="closeContainer">
-            <img src="./images/phone_icon.png" alt="" width="15px" />
-            <p>Call Now</p>
-            <span>647.391.2231</span>
-            <span>905.598.9414</span>
-          </div>
-
-          <div class="closeContainer">
-            <img src="./images/message_icon.png" alt="" width="15px" />
-            <p>Message Here</p>
-            <span>C0902999@mylambton.ca</span>
-            <span>C0903001@mylambton.ca</span>
-          </div>
+          <p>"Delicious food, good prices"</p>
+          <span>
+            "Delicious food, good prices" Very nice, cozy place. Service was
+            good, food delicious and so much to choose from :) Wanna go there
+            again :) ​ Pros: Good price, Good food, Cozy place and nice staff
+          </span>
         </div>
       </div>
+      <footer class="footer">
+        <div class="firstFooter">
+          <p>The Indian Restaurant</p>
+          <span>121 Brunel Rd | Mississauga, ON</span>
+          <span>647.391.2231 | 905.598.9414</span>
+        </div>
+        <div class="lastFooter"></div>
+      </footer>
+    </main>
+  </div>
+  <script>
+    function fadeIn() {
+      document.getElementById("contact").classList.add("fadeIn");
+    }
+    function fadeOut() {
+      document.getElementById("contact").classList.remove("fadeIn");
+    }
+  </script>
+</body>
 
-      <nav class="header">
-                  <span>Home</span>
-        </a>
-        <a href="./pages/menu.html">
-          <span>Menu</span>
-        </a>
-        <a href="./pages/about.html">
-          <span>About</span>
-        </a>
-        <span onclick="fadeIn()"> Contact </span>
-      </nav>
-
-      <main class="mainContainer">
-        <div class="firstContainer">
-          <div class="box">
-            <h1>The</h1>
-            <h1>Indian</h1>
-            <h1>Restaurant</h1>
-          </div>
-        </div>
-        <div class="secondContainer">
-          <div class="card card1">
-            <span>breakfast</span>
-          </div>
-          <div class="card card2">
-            <span>lunch</span>
-          </div>
-          <div class="card card3">
-            <span> dessert </span>
-          </div>
-        </div>
-        <div class="famousContainer">
-          <div class="famousHeader">
-            <span> The Famous Dishes </span>
-          </div>
-          <div class="famousDishes">
-            <div class="famousDish">
-              <div class="leftDish">
-                <img src="./images/dishes/dosa.webp" alt="dosa" />
-              </div>
-              <div class="rightDish">
-                <p>Dosa</p>
-                <span> Fond of Stuffed dosas? </span>
-                <span> Then Try this delicious protiein-rich dosa </span>
-              </div>
-            </div>
-            <div class="famousDish revDish">
-              <div class="rightDish">
-                <p>Kathiyawadi Dish</p>
-                <span>
-                  Enjoy a beautiful blend of eich spices ad culinary
-                </span>
-                <span> from Gujarat's royal Kathiawar region. </span>
-              </div>
-              <div class="leftDish">
-                <img src="./images/dishes/kathiyawadi.webp" alt="kathiyawadi" />
-              </div>
-            </div>
-            <div class="famousDish">
-              <div class="leftDish">
-                <img src="./images/dishes/daalbati.jpg" alt="dosa" />
-              </div>
-              <div class="rightDish">
-                <p>Rajasthani Dal Bati Churma</p>
-                <span>Wheat balls served with spicy lentils & Ghee!</span>
-                <span
-                  >A Traditional Dish from the state of Rajasthan in India</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-<div class="reviewContainer">
-          <div class="reviewBox">
-            <div class="profile">
-              <img src="./images/avtar1-_icon.png" alt="avtar" />
-            </div>
-            <p>"It surpassed all my expectations!"</p>
-            <span>
-              The food looks like it has been prepared for a culinary magazine.
-              While in Toronto City add Indian Restaurant as a culinary
-              experience. It will be a good place to take a date to or get
-              together with some friends. You will not be disappointed.
-            </span>
-          </div>
-          <div class="reviewBox">
-            <div class="profile">
-              <img src="./images/avtar1-_icon.png" alt="avtar" />
-            </div>
-            <p>"Best vegetarian restaurant... EVER"</p>
-            <span>
-              I absolutely love this place. The Dosas are the best things
-              ever!!! I've been a veggie for 22 years now and never had Dosas,
-              Paneer Chillie etc so to get all this as a veggie option is
-              fantastic! I go to this place every time I'm in Toronto :)
-            </span>
-          </div>
-          <div class="reviewBox">
-            <div class="profile">
-              <img src="./images/avtar1-_icon.png" alt="avtar" />
-            </div>
-            <p>"Delicious food, good prices"</p>
-            <span>
-              "Delicious food, good prices" Very nice, cozy place. Service was
-              good, food delicious and so much to choose from :) Wanna go there
-              again :) ​ Pros: Good price, Good food, Cozy place and nice staff
-            </span>
-          </div>
-        </div>
-        <footer class="footer">
-          <div class="firstFooter">
-            <p>The Indian Restaurant</p>
-            <span>121 Brunel Rd | Mississauga, ON</span>
-            <span>647.391.2231 | 905.598.9414</span>
-      </div>
-<div class="lastFooter"></div>
-        </footer>
-      </main>
-    </div>
-    <script>
-      function fadeIn() {
-        document.getElementById("contact").classList.add("fadeIn");
-      }
-      function fadeOut() {
-        document.getElementById("contact").classList.remove("fadeIn");
-      }
-    </script>
-  </body>
 </html>
