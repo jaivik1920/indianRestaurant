@@ -13,35 +13,82 @@ body {
   z-index: 1;
 }
 
-.header {
+header {
+  width: 100%;
+}
+
+header #mainNavbar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header #mainNavbar #logoDiv {
+  width: 15%;
+  margin: 5px 0px 10px 10px;
+  cursor: pointer;
+
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
+}
+
+#logoDiv a h3 {
+  font-size: 14px;
+  line-height: 12px;
+  margin: 0;
+}
+
+header #mainNavbar #logoDiv a {
+  text-decoration: none;
+  color: black;
+}
+#lastDiv {
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
+}
+#lastDiv p {
+  font-size: 14px;
+}
+
+#lastDiv span {
+  color: orangered;
+  font-weight: bolder;
+}
+
+header #mainNavbar #navbarContainer {
+  display: flex;
+  width: 80%;
+  height: 62px;
   justify-content: center;
   gap: 40px;
   padding: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.header a {
+header #mainNavbar #navbarContainer a {
   text-decoration: none;
   color: black;
 }
 
-.header span {
+header #mainNavbar #navbarContainer .navItems {
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.header span::after {
+header #mainNavbar #navbarContainer .navItems::after,
+header #mainNavbar #navbarContainer #menunavItem::after {
   content: "";
   display: block;
-  width: 0;
   height: 2px;
   background-color: black;
   transition: width 0.3s;
+  width: 0%;
 }
 
-.header span:hover::after,
-.header #homenavItem span::after {
+header #mainNavbar #navbarContainer .navItems:hover::after,
+header #mainNavbar #navbarContainer #menunavItem::after {
   width: 100%;
 }
 .contactContainer {
@@ -177,7 +224,7 @@ body {
   }
 }
 
-.card span {
+.card a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -186,8 +233,9 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: transparent;
+  text-decoration: none;
 }
-.card span:hover {
+.card a:hover {
   color: white;
 }
 .card1 :hover,
