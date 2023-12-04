@@ -63,6 +63,7 @@ header #mainNavbar #navbarContainer {
   width: 80%;
   height: 62px;
   justify-content: center;
+  align-items: center;
   gap: 40px;
   padding: 20px;
 }
@@ -75,6 +76,13 @@ header #mainNavbar #navbarContainer a {
 header #mainNavbar #navbarContainer .navItems {
   text-transform: uppercase;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 481px) {
+    font-size: 10px;
+  }
 }
 
 header #mainNavbar #navbarContainer .navItems::after,

@@ -126,6 +126,7 @@
     width: 80%;
     height: 62px;
     justify-content: center;
+    align-items: center;
     gap: 40px;
     padding: 20px;
   }
@@ -134,10 +135,19 @@
     text-decoration: none;
     color: black;
   }
+
   
   header #mainNavbar #navbarContainer .navItems {
     text-transform: uppercase;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 481px) {
+      font-size: 10px;
+    }
   }
   
   header #mainNavbar #navbarContainer .navItems::after,
@@ -229,6 +239,9 @@
     margin: 0px 0px 10px 0px;
     height: 40px;
     font-size: 20px;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px 10px;
   }
 
   main #booktableContainer form button{
@@ -237,18 +250,23 @@
     font-size: 20px;
     text-align: center;
     background-color: transparent;
-    transition: background-color 0.8s ease;
+    transition: background-color 0.4s ease;
     cursor: pointer;
     border: 2px solid white;
     margin: 20px 0px;
     text-transform: uppercase;
     color: white;
+    border-radius: 3px;
+    @media screen and (max-width:481px) {
+      font-size: 12px;
+    }
   }
 
   main #booktableContainer form button:hover{
     color: white;
     background-color: #28a745;
     border-color: #28a745;
+    color: black;
   }
   
   .footer {
