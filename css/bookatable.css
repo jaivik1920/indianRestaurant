@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "EB Garamond", serif;
+  }
+  
+  .contactContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    transition: width 4s, display 4s;
+    display: none;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  }
+  .fadeIn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transition: width 4s, display 4s;
+  }
+  
+  .close {
+    text-align: right;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .close img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .mainCloseContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+  }
+  .closeHeader {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  
+  .closeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+  .closeContainer p {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  
+  .closeContainer a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  header {
+    width: 100%;
+  }
+  
+  header #mainNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  header #mainNavbar #logoDiv {
+    width: 15%;
+    margin: 5px 0px 10px 10px;
+    cursor: pointer;
+  
+    @media screen and (max-width: 769px) {
+      display: none;
+    }
+  }
+  
+  #logoDiv h3 {
+    font-size: 14px;
+    line-height: 12px;
+  }
+  
+  header #mainNavbar #logoDiv a {
+    text-decoration: none;
+    color: black;
+  }
+  #lastDiv {
+    @media screen and (max-width: 769px) {
+      display: none;
+    }
+  }
+  #lastDiv p {
+    font-size: 14px;
+  }
+  
+  #lastDiv span {
+    color: orangered;
+    font-weight: bolder;
+  }
+  
+  header #mainNavbar #navbarContainer {
+    display: flex;
+    width: 80%;
+    height: 62px;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+  }
+  
+  header #mainNavbar #navbarContainer a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  header #mainNavbar #navbarContainer .navItems {
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  header #mainNavbar #navbarContainer .navItems::after,
+  header #mainNavbar #navbarContainer #bookATablenavItem::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
+    width: 0%;
+  }
+  
+  header #mainNavbar #navbarContainer .navItems:hover::after,
+  header #mainNavbar #navbarContainer #bookATablenavItem::after {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+  
+  main #posterContaier::before {
+    background: url("../images/poster1.jpg") no-repeat center center/cover;
+    content: "";
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    top: 60px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  main #posterContaier div {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  main #posterContaier div h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+    color: white;
+    font-style: italic;
+  
+    /* tablet */
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      font-size: 60px;
+    }
+    /* mobile */
+    @media screen and (max-width: 481px) {
+      font-size: 40px;
+    }
+  }
+  
+  main #booktableContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+  }
+
+  main #booktableContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    border: 1px solid black;
+    background-color: black;
+    padding: 30px 0px 0px 0px;
+    border-radius: 0px 70px;
+      /* mobile */
+      @media screen and (max-width: 672px) {
+        width: 90%;
+     }
+  }
+
+  main #booktableContainer form label{
+    width: 60%;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  main #booktableContainer form input{
+    width: 60%;
+    margin: 0px 0px 10px 0px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  main #booktableContainer form button{
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    transition: background-color 0.8s ease;
+    cursor: pointer;
+    border: 2px solid white;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  main #booktableContainer form button:hover{
+    color: white;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    color: white;
+    margin-top: 25px;
+  }
+  
+  .firstFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+  }
+  
+  .firstFooter p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+  }
+  
+  .firstFooter span {
+    letter-spacing: 2px;
+  }
+  
