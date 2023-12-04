@@ -343,6 +343,46 @@ header #mainNavbar #navbarContainer #menunavItem::after {
   }
 }
 
+#recipeVideos{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+
+    /* tablets */
+    @media screen and (max-width : 1400px) and (min-width: 481px) {
+      flex-direction: column;
+    } 
+    /* mobile */
+   @media screen and (max-width: 481px) { 
+    flex-direction: column;
+  } 
+}
+
+#recipeVideos div{
+  width: 45%;
+  margin: 0px 20px;
+
+   /* tablets */
+   @media screen and (max-width : 1400px) and (min-width: 481px) {
+    width: 98%;
+  } 
+  /* mobile */
+ @media screen and (max-width: 481px) { 
+  width: 98%;
+} 
+
+}
+
+#recipeVideos div video{
+  width: 100%;
+}
+
+#recipeVideos div h3{
+  text-align: center;
+  width: 100%;
+}
+
 .reviewContainer {
   display: flex;
   padding: 20px;

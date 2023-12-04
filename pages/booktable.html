@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table | The Indian Restaurant</title>
+    <link rel="stylesheet" href="../css/bookatable.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,700;1,800&display=swap"
+        rel="stylesheet" />
+</head>
+<body>
+    <div class="contactContainer" id="contact">
+        <div class="close">
+            <span onclick="fadeOut()">
+                <img src="../images/close_icon.png" alt="close-icon" />
+            </span>
+        </div>
+        <div class="mainCloseContainer">
+            <div class="closeHeader">new hours</div>
+            <div class="closeContainer">
+                <span>MONDAY - TUESDAY</span>
+                <span>12:00 PM to 9:00 PM</span>
+            </div>
+            <div class="closeContainer">
+                <span>WEDNESDAY - SUNDAY</span>
+                <span>12:00 PM to 10:00 PM</span>
+            </div>
+            <div class="closeContainer">
+                <img src="../images/phone_icon.png" alt="" width="15px" />
+                <p>Call Now</p>
+                <a href="tel:+16473912231">647.391.2231</a>
+                <a href="tel:+19055989414">905.598.9414</a>
+            </div>
+            <div class="closeContainer">
+                <img src="../images/location_icon.png" alt="location_icon" width="15px">
+                <p>Direction Header</p>
+                <span>121 Brunel Rd, Mississauga</span>
+            </div>
+            <div class="closeContainer">
+                <img src="../images/message_icon.png" alt="" width="15px" />
+                <p>Message Here</p>
+                <a href="mailto:C0902999@mylambton.ca">C0902999@mylambton.ca</a>
+                <a href="mailto:C0903001@mylambton.ca">C0903001@mylambton.ca</a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav id="mainNavbar">
+            <div id="logoDiv">
+                <a href="../index.html">
+                    <h3>The </h3>
+                    <h3>Indian</h3>
+                    <h3>Restaurant</h3>
+                </a>
+            </div>
+            <div id="navbarContainer">
+                <a href="../index.html">
+                    <span class="navItems">Home</span>
+                </a>
+                <a href="./menu.html" id="menunavItem">
+                    <span class="navItems">Menu</span>
+                </a>
+                <a href="./booktable.html" id="bookATablenavItem">
+                    <span class="navItems">Book a Table</span>
+                </a>
+                <a href="./about.html">
+                    <span class="navItems">About</span>
+                </a>
+                <span class="navItems" onclick="fadeIn()"> Contact </span>
+            </div>
+            <div id="lastDiv">
+                <p>We would like to say <span>"Padhariye!"</span> </p>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="posterContaier">
+            <div>
+                <h1>Book a table</h1>
+            </div>
+        </div>
+    
+        <div id="booktableContainer">
+            <form action="" method="POST">
+                <label for="name">your name</label>
+                <input type="text" id="name" name="name">
+                <label for="email">your email</label>
+                <input type="email" name="email" id="email">
+                <label for="phnumber">contact number</label>
+                <input type="tel" name="phnumber" id="phnumber">
+                <label for="numberofpeople">guest count</label>
+                <input type="number" id="numberofpeople" name="numberofpeople" max="10" min="1">
+                <label for="bookingdate">booking date</label>
+                <input type="date" id="bookingdate" name="bookingdate">
+                <label for="timeslot">time slot</label>
+                <input type="time" name="timeslot" id="timeslot">
+                <button type="submit">book now</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="firstFooter">
+          <p>The Indian Restaurant</p>
+          <span>121 Brunel Rd | Mississauga, ON</span>
+          <span>647.391.2231 | 905.598.9414</span>
+        </div>
+        <div class="lastFooter"></div>
+    </footer>
+
+    <script>
+        function fadeIn() {
+          document.getElementById("contact").classList.add("fadeIn");
+        }
+        function fadeOut() {
+          document.getElementById("contact").classList.remove("fadeIn");
+        }
+    </script>
+</body>
+</html>
