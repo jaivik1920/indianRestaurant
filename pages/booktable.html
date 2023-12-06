@@ -83,7 +83,7 @@
         </div>
     
         <div id="booktableContainer">
-            <form action="" method="POST" id="bookForm"  onsubmit="submitForm()">
+            <form action="" method="GET" id="bookForm"  onsubmit="submitForm()">
                 <label for="name">your name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">your email</label>
@@ -121,6 +121,7 @@
         function submitForm(){
             alert("Table Booked Successfully !");
             const frm = document.getElementById("bookForm")
+            frm.reset()
         }
     </script>
 </body>
