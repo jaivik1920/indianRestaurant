@@ -19,6 +19,7 @@
   padding: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 }
+
 .fadeIn {
   width: 100%;
   display: flex;
@@ -49,6 +50,7 @@
   gap: 25px;
   margin-top: 50px;
 }
+
 .closeHeader {
   font-size: 40px;
   text-transform: uppercase;
@@ -61,6 +63,7 @@
   letter-spacing: 2px;
   gap: 10px;
 }
+
 .closeContainer p {
   margin: 0px;
   font-size: 12px;
@@ -102,11 +105,13 @@ header #mainNavbar #logoDiv a {
   text-decoration: none;
   color: black;
 }
+
 #lastDiv {
   @media screen and (max-width: 769px) {
     display: none;
   }
 }
+
 #lastDiv p {
   font-size: 14px;
 }
@@ -134,6 +139,7 @@ header #mainNavbar #navbarContainer a {
 header #mainNavbar #navbarContainer .navItems {
   text-transform: uppercase;
   cursor: pointer;
+
   @media screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -172,6 +178,29 @@ main #posterContaier::before {
   position: absolute;
   z-index: -1;
   height: 630px;
+  animation: carousel 30s ease infinite;
+}
+
+@keyframes carousel {
+  0% {
+    background: url(../images/poster.jpg) no-repeat center center/cover;
+  }
+
+  25% {
+    background: url(../images/gallery/img3.png) no-repeat center center/cover;
+  }
+
+  50% {
+    background: url(../images/gallery/img4.jpg) no-repeat center center/cover;
+  }
+
+  75% {
+    background: url(../images/gallery/img5.jpg) no-repeat center center/cover;
+  }
+
+  100% {
+    background: url(../images/gallery/img6.jpg) no-repeat center center/cover;
+  }
 }
 
 main #posterContaier div {
@@ -182,6 +211,7 @@ main #posterContaier div {
   align-items: center;
   margin-bottom: 5px;
 }
+
 main #posterContaier div h1 {
   text-transform: uppercase;
   font-size: 70px;
@@ -192,6 +222,7 @@ main #posterContaier div h1 {
   @media screen and (max-width: 768px) and (min-width: 481px) {
     font-size: 60px;
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     font-size: 40px;
@@ -205,9 +236,11 @@ main #secondaryNavigation {
   justify-content: space-around;
   align-items: center;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
   /* tablet */
   @media screen and (max-width: 768px) and (min-width: 481px) {
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     display: none;
@@ -239,6 +272,7 @@ main #breakfastContainer {
   /* tablets */
   @media screen and (max-width: 768px) and (min-width: 481px) {
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     flex-direction: column;
@@ -255,10 +289,12 @@ main #breakfastContainer .breakfastitems {
   width: 30%;
   height: 350px;
   margin: 20px;
+
   /* tablets */
   @media screen and (max-width: 768px) and (min-width: 481px) {
     width: 50%;
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     width: 88%;
@@ -307,6 +343,7 @@ main #lunchContainer .lunchitems {
   @media screen and (max-width: 768px) and (min-width: 481px) {
     width: 50%;
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     width: 88%;
@@ -355,6 +392,7 @@ main #dinnerContainer .dinneritems {
   @media screen and (max-width: 768px) and (min-width: 481px) {
     width: 50%;
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     width: 88%;
@@ -403,6 +441,7 @@ main #dessertContainer .dessertitems {
   @media screen and (max-width: 768px) and (min-width: 481px) {
     width: 50%;
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     width: 88%;
@@ -451,6 +490,7 @@ main #beveragesContainer .beveragesitems {
   @media screen and (max-width: 768px) and (min-width: 481px) {
     width: 50%;
   }
+
   /* mobile */
   @media screen and (max-width: 481px) {
     width: 88%;
