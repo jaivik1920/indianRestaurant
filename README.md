@@ -1,3 +1,3 @@
-This is restaurant website.
+This is  Indian restaurant website created using HTML and CSS.
 
-This is College Project made by collabaration from Jaivik Patel and Shiv Mistry
+This is College Group Project made by Jaivik Patel and Shiv Mistry
